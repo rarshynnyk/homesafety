@@ -1,0 +1,12 @@
+@each $key, $value in $headings {
+  #{$key},
+  .#{$key} {
+    font-size: $value;
+  }
+}
+
+@each $key, $value in $font-weights {
+  .font-weight-#{$key} {
+    font-weight: $value;
+  }
+}

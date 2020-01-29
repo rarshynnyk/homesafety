@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0; 
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: $app-font-family;
+  font-size: $app-font-size;
+  font-weight: $app-font-weight;
+  line-height: $app-line-height;
+}
+
+.container {
+  max-width: 1640px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,14 @@
+.steps {
+  display: flex;
+  justify-content: center;
+  max-width: 1110px;
+  margin: 0 auto;
+
+  &-item {
+    flex: 1;
+    max-width: 267px;
+    margin: 0 35px;
+    text-align: center;
+    padding: 0 25px;
+  }
+}
