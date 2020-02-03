@@ -1,0 +1,130 @@
+$panel-bg: $white !default;
+$panel-bg-blur: rgba($panel-bg, 0.6) !default;
+$panel-blur-radius: 7px !default;
+
+.panel {
+  position: relative;
+  background: $panel-bg;
+
+  &-blur {
+    background: none;
+  }
+
+  &-body,
+  &-text,
+  &-footer {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-heading {
+    padding: 20px 15px;
+
+    @include media ('>=large-desktop') {
+      padding: 30px;
+    }
+
+    @include media ('>=widescreen') {
+      padding: 55px 60px;
+    }
+
+    &:not(:only-child) {
+      padding-bottom: 0;
+    }
+
+    & + .panel-body {
+      padding-top: 0;
+    }
+  }
+
+  &-body {
+    padding: 15px;
+    overflow: hidden;
+
+    @include media ('>=large-desktop') {
+      padding: 30px;
+    }
+
+    @include media ('>=widescreen') {
+      padding: 50px 60px;
+    }
+
+    &:after {
+      .panel-blur & {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $panel-bg-blur;
+        filter: blur($panel-blur-radius);
+        margin: -$panel-blur-radius;
+      }
+    }
+  }
+
+  &-list {
+    padding: 5px 35px;
+    margin: 0 0 22px;
+    list-style-type: none;
+
+    @include media ('>=large-desktop') {
+      padding: 0;
+    }
+
+    > li {
+      &:not(:last-child) {
+        @include media ('>=large-desktop') {
+          margin-bottom: 30px;
+        }
+      }
+
+      &:before {
+        content: "-";
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &-features {
+    margin-bottom: 100px;
+
+    @include media ('>=large-desktop') {
+      margin-bottom: 0;
+    }
+
+    .panel-footer {
+      margin-top: -23px;
+      text-align: center;
+  
+      @include media ('>=large-desktop') {
+        margin-top: -40px;
+      }
+  
+      .btn-lg {
+        padding-left: 25px;
+        padding-right: 25px;
+  
+        @include media ('>=large-desktop') {
+          padding-left: 45px;
+          padding-right: 45px;
+        }
+      }
+    }
+  }
+
+  &-feedback {
+    margin-bottom: -230px;
+
+    @include media ('>=large-desktop') {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@each $key, $value in $colors {
+  .panel-#{$key} {
+    background: $value;
+  }
+}

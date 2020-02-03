@@ -1,5 +1,132 @@
 .section {
+  &:not(.section-fullscreen) {
+    padding-top: 50px;
+
+    @include media ('>=large-desktop') {
+      padding-top: 80px;
+    }
+
+    @include media ('>=widescreen') {
+      padding-top: 145px;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 50px;
+
+    @include media ('>=large-desktop') {
+      margin-bottom: 80px;
+    }
+
+    @include media ('>=widescreen') {
+      margin-bottom: 120px;
+    }
+  }
+
+  &-fullscreen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin-bottom: 160px;
+
+    @include media ('>=tablet') {
+      margin-bottom: 0; 
+    }
+
+    @include media ('>=desktop') {
+      margin-bottom: 160px; 
+    }
+
+    @include media ('>=large-desktop') {
+      margin-bottom: 0;
+    }
+  }
+
   &-heading {
     text-align: center;
+    margin-bottom: 30px;
+
+    @include media ('>=large-desktop') {
+      margin-bottom: 50px;
+    }
+
+    @include media ('>=widescreen') {
+      margin-bottom: 105px;
+    }
+
+    &-title {
+      margin: 0;
+
+      &:not(:only-child) {
+        margin: 0 0 24px;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &-body {
+    width: 100%;
+    padding: 35px 0;
+
+    @include media ('>=desktop') {
+      padding: 0;
+    }
+
+    .section-fullscreen & {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 100%;
+      padding: 85px 0;
+
+      @include media ('>=desktop') {
+        justify-content: center;
+      }
+
+      @include media ('>=widescreen') {
+        padding: 160px 0;
+      }
+    }
+  }
+
+  &-footer {
+    padding: 35px 0 0;
+    text-align: center;
+  }
+
+  &-cover {
+    .section-fullscreen & {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-divider {
+    @include media ('>=widescreen') {
+      padding-top: 95px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 1px;
+      background: currentColor;
+    }
+  }
+
+  .container {
+    position: relative;
   }
 }

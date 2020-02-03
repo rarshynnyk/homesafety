@@ -1,0 +1,17 @@
+$color-label-font-size: 20px;
+$color-label-font-size-xs: 14px;
+$color-label-line-height-xs: 1.28;
+$color-label-color: $white;
+
+.control-label {
+  display: block;
+  font-size: $color-label-font-size-xs;
+  line-height: $color-label-line-height-xs;
+  color: $color-label-color;
+  margin-bottom: 10px;
+
+  @include media ('>=tablet') {
+    font-size: $color-label-font-size;
+    margin-bottom: 13px;
+  }
+}

@@ -1,0 +1,13 @@
+.form-group {
+  margin-bottom: 20px;
+
+  @include media ('>=tablet') {
+    margin-bottom: 35px;
+  }
+
+  .invalid-feedback {
+    padding-top: 5px;
+    font-size: 14px;
+    color: map-get($colors, 'danger');
+  }
+}

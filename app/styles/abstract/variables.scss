@@ -1,18 +1,186 @@
+$layout-names: 'phone', 'tablet', 'desktop', 'large-desktop', 'widescreen';
+$layout-keys: 'xs', 'sm', 'md', 'lg', 'xl';
+$layout-values: 320px, 768px, 1024px, 1280px, 1440px;
+
+$breakpoints: map-zip($layout-names, $layout-values);
+$breakpoints-keys: map-zip($layout-names, $layout-keys);
+
+$text-align-names: left, center, right;
+$text-align-values: left, center, right;
+
+$font-names: 'regular', 'bold', 'heavy';
+$font-values: 400, 700, 900;
+
+$font-weights: map-zip($font-names, $font-values);
+$text-aligns: map-zip($text-align-names, $text-align-values);
+
+
+$white: #fff;
+$black: #000;
+
+$app-color-primary: #9BC7ED;
+$app-color-danger: #dc3545;
+
 $app-font-family: 'Mont';
 $app-font-size: 14px;
 $app-font-weight: 400;
 $app-line-height: 1.17;
+$app-shadow: 0 0 10px rgba($black, .3);
 
-$headings: (
-  h1: 60px,
-  h2: 40px,
-  h3: 24px,
-  h4: 20px,
-  h5: 18px,
+$app-default-radius: 0;
+
+$colors: (
+  'primary': $app-color-primary,
+  'light': $white,
+  'dark': $black,
+  'danger': $app-color-danger
 );
 
-$font-weights: (
-  regular: 400,
-  bold: 700,
-  heavy: 900
-)
+$headings: (
+  'h1': (
+    'xs': (
+      'font-size': 32px,
+      'line-height': 1.35,
+      'font-weight': 900,
+      'margin': 0 0 35px
+    ),
+    'xl': (
+      'font-size': 60px,
+      'line-height': 1.35,
+      'font-weight': 900,
+      'margin': 0 0 70px
+    )
+  ),
+  'h2': (
+    'xs': (
+      'font-size': 24px,
+      'line-height': 1.16,
+      'font-weight': 900,
+      'margin': 0 0 15px
+    ),
+    'lg': (
+      'font-size': 30px,
+      'line-height': 1.16,
+      'font-weight': 900,
+      'margin': 0 0 15px
+    ),
+    'xl': (
+      'font-size': 40px,
+      'line-height': 1.4,
+      'font-weight': 900,
+      'margin': 0 0 35px
+    )
+  ),
+  'h3': (
+    'xs': (
+      'font-size': 20px,
+      'line-height': 2,
+      'font-weight': 900
+    ),
+    'xl': (
+      'font-size': 40px,
+      'line-height': 1.45,
+      'font-weight': 900
+    )
+  ),
+  'h4': (
+    'xs': (
+      'font-size': 14px,
+      'line-height': 1.7,
+      'font-weight': 400
+    ),
+    'xl': (
+      'font-size': 24px,
+      'line-height': 1.5,
+      'font-weight': 400
+    )
+  ),
+  'h5': (
+    'xs': (
+      'font-size': 16px,
+      'line-height': 1.3,
+      'font-weight': 700
+    ),
+    'xl': (
+      'font-size': 20px,
+      'line-height': 1.35,
+      'font-weight': 700
+    )
+  ),
+);
+
+$text-sizes: (
+  'xs': (
+    'font-size': 10px,
+    'line-height': 1.6
+  ),
+  'sm': (
+    'font-size': 12px,
+    'line-height': 2
+  ),
+  'md': (
+    'font-size': 14px,
+    'line-height': 2
+  ),
+  'lg': (
+    'font-size': 18px,
+    'line-height': 1.333
+  ),
+  'xl': (
+    'font-size': 20px,
+    'line-height': 1.3
+  )
+);
+
+$heading-bg: $white !default;
+$heading-shadow: $app-shadow !default;
+$heading-fixed-offset: 100px !default;
+$heading-fixed-offset-xs: 85px !default;
+
+$btn-sizes: (
+  'lg': (
+    'font-size': 29px,
+    'line-height': 1.25,
+    'font-weight': 900,
+    'padding': 20px 80px
+  )
+);
+
+$btn-sizes-xs: (
+  'lg': (
+    'font-size': 20px,
+    'line-height': 1.2,
+    'font-weight': 900,
+    'padding': 10px 20px
+  )
+);
+
+$btn-colors: (
+  'primary': (
+    'background': $app-color-primary,
+    'background-hover': $white,
+    'color': $white,
+    'color-hover': $app-color-primary,
+    'border-color': $app-color-primary,
+    'border-width': 1px,
+    'border-radius': $app-default-radius
+  ),
+  'secondary': (
+    'background': $white,
+    'background-hover': $app-color-primary,
+    'color': $black,
+    'color-hover': $white,
+    'border-color': $white,
+    'border-width': 1px,
+    'border-radius': $app-default-radius
+  ),
+  'dark': (
+    'background': $black,
+    'background-hover': transparent,
+    'color': $white,
+    'color-hover': $black,
+    'border-color': $black,
+    'border-width': 1px,
+    'border-radius': $app-default-radius
+  )
+);

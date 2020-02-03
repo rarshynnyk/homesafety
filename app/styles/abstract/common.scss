@@ -15,10 +15,15 @@ body {
   font-size: $app-font-size;
   font-weight: $app-font-weight;
   line-height: $app-line-height;
+  padding-top: $heading-fixed-offset;
 }
 
-.container {
-  max-width: 1640px;
-  margin-left: auto;
-  margin-right: auto;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0 0 1em;
 }

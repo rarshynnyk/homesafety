@@ -1,0 +1,21 @@
+@mixin makeHelpers($classname, $property, $map, $breakpoints: $breakpoints-keys, $mobileFirst: true) {
+  @each $key, $value in $map {
+    .#{$classname}#{$key} {
+      #{$property}: $value;
+    }
+  
+    @each $breakpointKey, $breakpointValue in $breakpoints {
+      .#{$classname}#{$breakpointValue}-#{$key} {
+        @if ($mobileFirst) {
+          @include media ('>=#{$breakpointKey}') {
+            #{$property}: $value;
+          }
+        } @else {
+          @include media ('<=#{$breakpointKey}') {
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+  }
+}

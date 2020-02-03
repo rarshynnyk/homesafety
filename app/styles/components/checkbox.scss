@@ -1,0 +1,51 @@
+$checkbox-size: 18px !default; 
+$checkbox-bg: $white !default;
+$checkbox-border-color: $white !default;
+$checkbox-border-radius: $app-default-radius !default;
+$checkbox-border-width: 1px !default;
+
+.checkbox {
+  display: flex;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &-input {
+    @extend [class^="icon-"];
+    @extend .icon-checkmark;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 $checkbox-size;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    background: $checkbox-bg;
+    border: $checkbox-border-width solid $checkbox-border-color;
+    border-radius: $checkbox-border-radius;
+    transition: opacity 0.3s ease-in-out;
+
+    &:before {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    input[type="checkbox"]:checked + &{
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &-label {
+    display: inline-block;
+    padding-left: 15px;
+  }
+}

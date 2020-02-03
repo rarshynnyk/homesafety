@@ -17,30 +17,113 @@
     <script src="scripts/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
+  <body class="heading-fixed-offset">
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <section class="section">
-      <header class="section-heading">
-        <div class="container">
-          <h2 class="font-weight-heavy">How it works</h2>
-        </div>
-      </header>
+    <header class="heading heading-fixed">
+      <div class="container">
+        <nav class="navbar">
+          <a href="/" class="navbar-brand">
+            <picture>
+              <source media="(max-width: 768px)" srcset="./images/logo_mob.png">
+              <img src="./images/logo.png" alt="US–Homesafety">
+            </picture>
+          </a>
+          <div class="navbar-actions">
+            <span class="navbar-label text-sm text-sm-md text-md-lg text-lg-xl">Don`t know where to start? Talk to the expert:</span>
+            <a href="tel:312312312312" class="btn btn-primary">Call now: <span class="phone">xxx-xxx-xxx</span></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section id="hero" class="section section-fullscreen">
+      <img src="./images/hero.jpg" alt="hero-cover" class="section-cover" />
       <div class="section-body">
         <div class="container">
-          <div class="cards">
-            <div class="card card-flat card-sm">
-              <h2 class="h4">Fill the form to get quotes</h2>
-              <p>Answer a few questions about a place you want to secure</p>
+          <div class="row row-justify-between">
+            <div class="col col-xs-12 col-lg-6">
+              <h1>Right Home Security Choosing Made Easy</h1>
+              <div class="panel panel-features panel-blur">
+                <div class="panel-body">
+                  <div class="panel-text">
+                    <ul class="panel-list text-md text-lg-xl font-weight-lg-bold">
+                      <li>All Needed Info in One Place</li>
+                      <li>No need to have a much knowledge </li>
+                      <li>Advices and Recomendations From Local Home Security Experts</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                  <a href="tel:312312312312" class="btn btn-primary btn-lg font-weight-bold">Call now: xxx-xxx-xxx</a>
+                </div>
+              </div>
             </div>
-            <div class="card card-flat card-sm">
-              <h2 class="h4">Pre-screened installers submit quotes</h2>
-              <p>Installers compete for your business</p>
-            </div>
-            <div class="card card-flat card-sm">
-              <h2 class="h4">Compare quotes and save the money!</h2>
-              <p>Pick the best quote for you based on terms and price!</p>
+            <div class="col col-xs-12 col-lg-5">
+              <div class="panel panel-primary panel-feedback">
+                <div class="panel-heading">
+                  <!-- Step 1  -->
+                  <h2>Compare Quotes From Local Installers in Houston</h2>
+
+                  <!-- Step 2  -->
+                  <!-- <h2>About You</h2>
+                  <h4>Use Your Best Phone And Email to Recieve Quotes</h4> -->
+                </div>
+                <div class="panel-body">
+                  <form>
+                    <!-- Step 1  -->
+  
+                    <div class="form-group">
+                      <label for="" class="control-label">How Many Entrances You Want To Secure?</label>
+                      <input type="text" class="form-control" placeholder="How Many Entrances You Want To Secure?">
+                      <div class="invalid-feedback">
+                        Please provide a valid city.
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="" class="control-label">Do You Already Use Any Security System?</label>
+                      <input type="text" class="form-control" placeholder="Choose Yes or No">
+                    </div>
+                    <button type="button" class="btn btn-dark btn-lg btn-block">Next</button>
+  
+                    <!-- Step 2  -->
+                    <!-- <div class="row">
+                      <div class="col col-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="First Name">
+                        </div>
+                      </div>
+                      <div class="col col-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Last Name">
+                        </div>
+                      </div>
+                      <div class="col col-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Phone">
+                        </div>
+                      </div>
+                      <div class="col col-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="accept" class="checkbox">
+                            <input type="checkbox" name="accept" id="accept">
+                            <span class="checkbox-input"></span>
+                            <span class="checkbox-label text-light text-small">By clicking above, you authorize us-homesafety.com and up to four Home Security Companies to send you emails and call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is a mobile phone or is on any national or state “Do Not Call” list. Message and data rates may apply. Your consent here is not based on a condition of purchase.</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-lg btn-block font-weight-bold">Submit</button>-->
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -49,40 +132,85 @@
     <section class="section">
       <header class="section-heading">
         <div class="container">
-          <h2 class="font-weight-heavy">Feel Safe at Home</h2>
-          <p class="h3">In the United States, a burglary occurs approximately every 14.4 seconds.1 You need to be prepared.</p>
+          <h2 class="section-heading-title font-weight-heavy">How it works</h2>
         </div>
       </header>
       <div class="section-body">
         <div class="container">
-          <div class="features">
+          <div class="row row-justify-center">
+            <div class="col col-xs-12 col-lg-9">
+              <div class="row">
+                <div class="col col-xs-12 col-md-4">
+                  <div class="card card-flat card-sm text-center">
+                    <img src="./images/how-it-works-1.png" alt="Fill the form to get quotes" class="card-picture">
+                    <h2 class="h5 card-title">Fill the form to get quotes</h2>
+                    <div class="card-text text-md">
+                      <p>Answer a few questions about a place you want to secure</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-xs-12 col-md-4">
+                  <div class="card card-flat card-sm text-center">
+                    <img src="./images/how-it-works-2.png" alt="Pre-screened installers submit quotes" class="card-picture">
+                    <h2 class="h5 card-title">Pre-screened installers submit quotes</h2>
+                    <div class="card-text text-md">
+                      <p>Installers compete for your business</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-xs-12 col-md-4">
+                  <div class="card card-flat card-sm text-center">
+                    <img src="./images/how-it-works-3.png" alt="Compare quotes and save the money!" class="card-picture">
+                    <h2 class="h5 card-title">Compare quotes and save the money!</h2>
+                    <div class="card-text text-md">
+                      <p>Pick the best quote for you based on terms and price!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider"></div>
+    </section>
+    <section class="section">
+      <header class="section-heading">
+        <div class="container">
+          <h2 class="section-heading-title font-weight-heavy">Feel Safe at Home</h2>
+          <div class="row row-justify-center">
+            <div class="col col-xs-12 col-lg-5 h4">
+              <p>In the United States, a burglary occurs approximately every 14.4 seconds. You need to be prepared.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="section-body">
+        <div class="container">
+          <div class="features text-medium">
             <div class="features-content">
-              <ul class="features-list">
+              <ul class="features-list text-md text-xl-lg">
                 <li class="features-list-item">
-                  <h3 class="h4">Select Property Type</h3>
+                  <h3 class="h5 features-list-item-title font-weight-bold">Select Property Type</h3>
                   <p>It’s important to know which type of property you own, so we can match to the best security system available.</p>
                 </li>
                 <li class="features-list-item">
-                  <h3 class="h4">Compare Security System</h3>
+                  <h3 class="h5 features-list-item-title font-weight-bold">Compare Security System</h3>
                   <p>We will make a selection for you from the top home security providers. You can compare them all here!</p>
                 </li>
                 <li class="features-list-item">
-                  <h3 class="h4"></h3>
-                  <p></p>
-                </li>
-                <li class="features-list-item">
-                  <h3 class="h4">Protect your Home</h3>
+                  <h3 class="h5 features-list-item-title font-weight-bold">Protect your Home</h3>
                   <p>Check on your kids and your pets, and keep an eye on your house at all times with our mobile monitoring technology.</p>
                 </li>
                 <li class="features-list-item">
-                  <h3 class="h4">Start Saving</h3>
+                  <h3 class="h5 features-list-item-title font-weight-bold">Start Saving</h3>
                   <p>We guarantee to provide you with the best security system in the market. Request a quote here and start saving!</p>
                 </li>
               </ul>
-              <a href="#hero" class="btn btn-light btn-lg">Compare Quotes</a>
+              <a href="#hero" class="btn btn-secondary btn-lg btn-block">Compare Quotes</a>
             </div>
             <div class="features-picture">
-              <img src="" alt="features">
+              <img src="./images/features.jpg" alt="features">
             </div>
           </div>
         </div>
@@ -91,31 +219,105 @@
     <section class="section">
       <header class="section-heading">
         <div class="container">
-          <h2 class="font-weight-heavy">What our clients says</h2>
+          <h2 class="section-heading-title font-weight-heavy">What our clients says</h2>
         </div>
       </header>
       <div class="section-body">
         <div class="container">
-          <div class="cards">
-            <div class="card card-flat card-md">
-              <h2 class="h4">Finding the best plan was quick and easy…</h2>
-              <p>This site was amazingly accommodating and helpful as I made my way through the maze of alternatives and variables associated with the decision to protect our home. I found it extremely helpful to be able to compare the various quotes to determine the best installer. We’ve decided on our installer and will let you know how it turns out. We’ve gone with VIVINT. and so far the people have been great.</p>
-            </div>
-            <div class="card card-flat card-md">
-              <h2 class="h4">US-HomeSafety simplified everything!</h2>
-              <p>This site was amazingly accommodating and helpful as I made my way through the maze of alternatives and variables associated with the decision to protect our home. I found it extremely helpful to be able to compare the various quotes to determine the best installer. We’ve decided on our installer and will let you know how it turns out. We’ve gone with VIVINT. and so far the people have been great.</p>
-            </div>
-            <div class="card card-flat card-md">
-              <h2 class="h4">US-HomeSafety simplified everything!</h2>
-              <p>This site was amazingly accommodating and helpful as I made my way through the maze of alternatives and variables associated with the decision to protect our home. I found it extremely helpful to be able to compare the various quotes to determine the best installer. We’ve decided on our installer and will let you know how it turns out. We’ve gone with VIVINT. and so far the people have been great.</p>
+          <div class="row row-justify-center">
+            <div class="col col-xs-12 col-lg-10">
+              <div class="row">
+                <div class="col col-xs-12 col-md-4">
+                  <div class="card card-flat card-md text-center">
+                    <div class="card-avatar avatar">
+                      <div class="avatar-picture">
+                        <img src="https://via.placeholder.com/102x102" alt="Leonard Polletta">
+                      </div>
+                      <div class="avatar-title text-md text-lg-sm">Leonard Polletta</div>
+                    </div>
+                    <div class="card-text text-xl-sm">
+                      <h2 class="card-title h5">Finding the best plan was quick and easy…</h2>
+                      <p>This site was amazingly accommodating and helpful as I made my way through the maze of alternatives and variables associated with the decision to protect our home. I found it extremely helpful to be able to compare the various quotes to determine the best installer. We’ve decided on our installer and will let you know how it turns out. We’ve gone with VIVINT. and so far the people have been great.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-xs-12 col-md-4">
+                  <div class="card card-flat card-md text-center">
+                    <div class="card-avatar avatar">
+                      <div class="avatar-picture">
+                        <img src="https://via.placeholder.com/102x102" alt="Leonard Polletta">
+                      </div>
+                      <div class="avatar-title text-md text-lg-sm">Leonard Polletta</div>
+                    </div>
+                    <div class="card-text text-xl-sm">
+                      <h2 class="card-title h5">US-HomeSafety simplified everything!</h2>
+                      <p>This site was amazingly accommodating and helpful as I made my way through the maze of alternatives and variables associated with the decision to protect our home. I found it extremely helpful to be able to compare the various quotes to determine the best installer. We’ve decided on our installer and will let you know how it turns out. We’ve gone with VIVINT. and so far the people have been great.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-xs-12 col-md-4">
+                  <div class="card card-flat card-md text-center">
+                    <div class="card-avatar avatar">
+                      <div class="avatar-picture">
+                        <img src="https://via.placeholder.com/102x102" alt="Leonard Polletta">
+                      </div>
+                      <div class="avatar-title text-md text-lg-sm">Leonard Polletta</div>
+                    </div>
+                    <div class="card-text text-xl-sm">
+                      <h2 class="card-title h5">US-HomeSafety simplified everything!</h2>
+                      <p>This site was amazingly accommodating and helpful as I made my way through the maze of alternatives and variables associated with the decision to protect our home. I found it extremely helpful to be able to compare the various quotes to determine the best installer. We’ve decided on our installer and will let you know how it turns out. We’ve gone with VIVINT. and so far the people have been great.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="section-footer text-center">
+      <footer class="section-footer">
         <a href="#hero" class="btn btn-primary btn-lg">Compare Quotes</a>
       </footer>
     </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="hidden-md">
+          <div class="row row-justify-center">
+            <div class="col col-xs-6 footer-col">
+              <a href="/" class="logo">
+                <img src="./images/logo_mob.png" alt="US–Homesafety">
+              </a>
+            </div>  
+            <div class="col col-xs-6 footer-col text-right">
+              <ul class="footer-list">
+                <li><a href="#"><i class="icon-email"></i></a></li>
+                <li><a href="#"><i class="icon-facebook"></i></a></li>
+              </ul>
+            </div>
+            <div class="col col-xs-10 text-xs text-center">
+              Imporove Your Hose Safety with US-HomeSafety Copyright 2017 | <a href="#">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden-xs visible-md">
+          <div class="row row-align-center row-justify-between">
+            <div class="col col-sm-2">
+              <a href="/" class="logo">
+                <img src="./images/logo_mob.png" alt="US–Homesafety">
+              </a>
+            </div>
+            <div class="col col-sm-6 col-lg-4 text-center text-lg">
+              Imporove Your Hose Safety with US-HomeSafety Copyright 2017 | <a href="#">Privacy Policy</a>
+            </div>
+            <div class="col col-sm-2 text-right">
+              <ul class="footer-list">
+                <li><a href="#"><i class="icon-email"></i></a></li>
+                <li><a href="#"><i class="icon-facebook"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- build:js scripts/vendor.js -->
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->

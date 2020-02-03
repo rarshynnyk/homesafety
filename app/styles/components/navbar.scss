@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  align-items: center;
+
+  &-brand {
+    margin-right: 20px;
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    .navbar-label {
+      line-height: 1.333;
+      margin-right: 10px;
+      max-width: 115px;
+
+      @include media ('>=tablet') {
+        max-width: none;
+      }
+
+      @include media ('>=large-desktop') {
+        margin-right: 28px;
+      }
+    }
+
+    .btn {
+      font-size: 14px;
+      padding: 7px 25px;
+
+      @include media ('>=tablet') {
+        white-space: nowrap;
+      }
+
+      @include media ('>=desktop') {
+        padding: 13px 25px;
+      }
+
+      @include media ('>=large-desktop') {
+        font-size: 18px;
+        padding: 10px 25px;
+      }
+
+      @include media ('>=widescreen') {
+        font-size: 24px;
+        padding: 15px 45px;
+      }
+
+      .phone {
+        display: block;
+        @include media ('>=tablet') {
+          display: inline;
+        }
+      }
+    }
+  }
+}

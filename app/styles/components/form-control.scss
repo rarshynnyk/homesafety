@@ -1,0 +1,33 @@
+$form-control-font-size: 24px !default;
+$form-control-font-size-xs: 16px !default;
+$form-control-padding-x: 20px !default;
+$form-control-padding-y: 15px !default;
+$form-control-padding-x-xs: 10px !default;
+$form-control-padding-y-xs: 5px !default;
+$form-control-line-height: 1.2 !default;
+$form-control-font-weight: 700 !default;
+$form-control-bg: $white !default;
+$form-control-color: $black !default;
+$form-control-border-color: $form-control-bg !default;
+$form-control-border-width: 1px !default;
+
+.form-control {
+  font-size: $form-control-font-size-xs;
+  font-weight: $form-control-font-weight;
+  line-height: $form-control-line-height;
+  width: 100%;
+  background: $form-control-bg;
+  color: $form-control-color;
+  border: $form-control-border-width solid $form-control-border-color;
+  outline: none;
+  padding: $form-control-padding-y-xs $form-control-padding-x-xs;
+
+  @include media ('>=tablet') {
+    font-size: $form-control-font-size;
+    padding: $form-control-padding-y $form-control-padding-x;
+  }
+
+  &::placeholder {
+    color: currentColor;
+  }
+}

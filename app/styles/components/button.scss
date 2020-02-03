@@ -1,7 +1,50 @@
+$btn-font-size: 24px !default;
+$btn-line-height: 1.2 !default;
+
 .btn {
   display: inline-block;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
+  text-align: center;
+  padding: 15px 44px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
   &-block {
     display: block;
+    width: 100%;
+  }
+}
+
+@each $key, $value in $btn-colors {
+  .btn-#{$key} {
+    background: map-get($value, 'background');
+    color: map-get($value, 'color');
+    border-radius: map-get($value, 'border-radius');
+    border: map-get($value, 'border-width') solid map-get($value, 'border-color');
+
+    &:hover,
+    &.active {
+      background: map-get($value, 'background-hover');
+      color: map-get($value, 'color-hover');
+    }
+  }
+}
+
+@each $key, $value in $btn-sizes {
+  .btn-#{$key} {
+    font-size: map-deep-get($btn-sizes-xs, $key, 'font-size');
+    line-height: map-deep-get($btn-sizes-xs, $key, 'line-height');
+    font-weight: map-deep-get($btn-sizes-xs, $key, 'font-weight');
+    padding: map-deep-get($btn-sizes-xs, $key, 'padding');
+
+    @include media('>=large-desktop') {
+      font-size: map-get($value, 'font-size');
+      line-height: map-get($value, 'line-height');
+      font-weight: map-get($value, 'font-weight');
+      padding: map-get($value, 'padding');
+    }
   }
 }

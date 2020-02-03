@@ -1,0 +1,128 @@
+$grid-container-max-width: 1690px !default;
+$grid-column-count: 12 !default;
+$grid-column-gutter: 25px !default;
+$grid-column-gutter-xs: 20px !default;
+
+$row-aligns: (
+  'start': flex-start,
+  'center': center,
+  'end': flex-end,
+);
+
+$row-justify: (
+  'start': flex-start,
+  'center': center,
+  'end': flex-end,
+  'between': space-between,
+);
+
+.container {
+  width: 100%;
+  max-width: $grid-container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-column-gutter-xs;
+  padding-right: $grid-column-gutter-xs;
+  
+
+  @include media ('>=tablet') {
+    padding-left: $grid-column-gutter;
+    padding-right: $grid-column-gutter;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -($grid-column-gutter/2);
+  margin-right: -($grid-column-gutter/2);
+
+  &-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @each $key, $value in $row-aligns {
+    &-align-#{$key} {
+      align-items: $value;
+    }
+  }
+  
+  @each $breakpointKey, $breakpointValue in $breakpoints-keys {
+    @each $key, $value in $row-aligns {
+      &-align-#{$breakpointValue}-#{$key} {
+        @include media ('>=#{$breakpointKey}') {
+          align-items: $value;
+        }
+      }
+    }
+  }
+
+  @each $key, $value in $row-justify {
+    &-justify-#{$key} {
+      justify-content: $value;
+    }
+  }
+  
+  @each $breakpointKey, $breakpointValue in $breakpoints-keys {
+    @each $key, $value in $row-justify {
+      &-justify-#{$breakpointValue}-#{$key} {
+        @include media ('>=#{$breakpointKey}') {
+          justify-content: $value;
+        }
+      }
+    }
+  }
+}
+
+.col {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+  padding-left: $grid-column-gutter/2;
+  padding-right: $grid-column-gutter/2;
+
+  @for $i from 1 through $grid-column-count {
+    $percentage: $i / $grid-column-count;
+
+    &-#{$i} {
+      flex-grow: 0;
+      flex-basis: $percentage * 100%;
+      width: $percentage * 100%;
+    }
+  }
+
+  @each $breakpointKey, $breakpointValue in $breakpoints-keys {
+    @for $i from 1 through $grid-column-count {
+      $percentage: $i / $grid-column-count;
+  
+      &-#{$breakpointValue}-#{$i} {
+        @include media ('>=#{$breakpointKey}') {
+          flex-grow: 0;
+          flex-basis: $percentage * 100%;
+          width: $percentage * 100%;
+        }
+      }
+    }
+  }
+}
+
+@each $breakpointKey, $breakpointValue in $breakpoints-keys {
+  .hidden-#{$breakpointValue} {
+    @include media ('>=#{$breakpointKey}') {
+      display: none;
+    }
+  }
+}
+
+@each $breakpointKey, $breakpointValue in $breakpoints-keys {
+  .visible-#{$breakpointValue} {
+    @include media ('>=#{$breakpointKey}') {
+      display: block;
+    }
+  }
+}

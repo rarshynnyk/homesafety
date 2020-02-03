@@ -1,0 +1,22 @@
+.avatar {
+  display: inline-block;
+
+  &-picture {
+    display: inline-block;
+    width: 103px;
+    height: 103px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    @include media ('>=large-desktop') {
+      margin-bottom: 17px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

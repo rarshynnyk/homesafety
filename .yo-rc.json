@@ -2,5 +2,20 @@
   "generator-mocha": {
     "ui": "bdd",
     "rjs": false
+  },
+  "generator-fountain-vue": {
+    "version": "1.0.0",
+    "props": {
+      "resolved": "/Users/arshynnyk/node_modules/generator-fountain-vue/generators/app/index.js",
+      "namespace": "fountain-vue:app",
+      "_": [],
+      "framework": "vue",
+      "js": "babel",
+      "modules": "webpack",
+      "css": "scss",
+      "ci": [],
+      "sample": "hello",
+      "router": "none"
+    }
   }
 }

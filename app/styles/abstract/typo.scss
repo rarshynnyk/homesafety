@@ -1,12 +1,36 @@
-@each $key, $value in $headings {
-  #{$key},
-  .#{$key} {
-    font-size: $value;
+@each $breakpointKey, $breakpointValue in $breakpoints-keys {
+  @each $headingKey, $headingValue in $headings {
+    #{$headingKey},
+    .#{$headingKey} {
+      @include media ('>=#{$breakpointKey}') {
+        @if (map-has-keys($headingValue, $breakpointValue)) {
+          font-size: map-deep-get($headingValue, $breakpointValue, 'font-size');
+          line-height: map-deep-get($headingValue, $breakpointValue, 'line-height');
+          font-weight: map-deep-get($headingValue, $breakpointValue, 'font-weight');
+          margin: map-deep-get($headingValue, $breakpointValue, 'margin');
+        }
+      }
+    }
   }
 }
 
-@each $key, $value in $font-weights {
-  .font-weight-#{$key} {
-    font-weight: $value;
+@each $key, $value in $text-sizes {
+  .text-#{$key} {
+    font-size: map-get($value, 'font-size');
+    line-height: map-get($value, 'line-height');
   }
 }
+
+@each $breakpointKey, $breakpointValue in $breakpoints-keys {
+  @each $key, $value in $text-sizes {
+    .text-#{$breakpointValue}-#{$key} {
+      @include media ('>=#{$breakpointKey}') {
+        font-size: map-get($value, 'font-size');
+        line-height: map-get($value, 'line-height');
+      }
+    }
+  }
+}
+
+@include makeHelpers('text-', text-align, $text-aligns);
+@include makeHelpers('font-weight-', font-weight, $font-weights);
